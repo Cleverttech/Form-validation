@@ -14,7 +14,6 @@ body {
 }
 .container {
   background-color: white;
-  border-radius: 5px;
   max-width: 100%;
   width: 400px;
   box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.3);
@@ -77,4 +76,24 @@ body {
   color: white;
   font-family: inherit;
   font-size: 17px;
+}
+
+/*success and error highlighting */
+.form-control.error input {
+  border-color: rgb(172, 67, 67);
+}
+.form-control.success input {
+  border-color: rgb(64, 114, 64);
+}
+.form-control.success i.fa-check-circle {
+  visibility: visible;
+  color: rgb(64, 114, 64);
+}
+.form-control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: rgb(172, 67, 67);
+}
+.form-control.error small {
+  visibility: visible;
+  color: rgb(172, 67, 67);
 }
