@@ -40,9 +40,13 @@ function checkInputs() {
 
   if (password2Value === "") {
     setErrorFor(password2, "Password cannot be empty");
+  }else if(passwordValue !== password2Value){
+    setErrorFor(password2, "Passwords do not match");
   } else {
     setSuccessFor(password2);
   }
+
+  
 }
 
 function setErrorFor(input, message) {
