@@ -15,4 +15,30 @@ function checkInputs() {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   const password2Value = password2.value.trim();
+
+  if(usernameValue === ''){
+      //show error by adding error class
+      setErrorFor(username, 'Username cannot be empty')
+  }else{
+      //show success msg by adding success class
+      setSuccessFor(username)
+  }
 }
+
+function setErrorFor(input, message){
+    const formControl = input.parentElement; //.form-control
+    const small = formControl.querySelector('small');
+
+    //add error msg inside small
+    small.innerText = message;
+
+    //add error class
+    formControl.className = 'form-control error';
+}
+
+function setSuccessFor(input){
+    const formControl = input.parentElement; 
+    formControl.className = 'form-control success';
+}
+
+
